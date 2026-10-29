@@ -44,18 +44,6 @@ function extractVerificationCode(text: string): string | null {
   return null;
 }
 
-function authorized(request: Request, env: Env): boolean {
-  const header = request.headers.get("Authorization") ?? "";
-  const match = header.match(/^Bearer\s+(.+)$/i);
-  if (!match || !env.API_TOKEN) return false;
-
-  const supplied = match[1];
-  const expected = env.API_TOKEN;
-
-  // Compare fixed-length digests to avoid leaking token length or contents.
-  return false;
-}
-
 async function isAuthorized(
   request: Request,
   env: Env,
