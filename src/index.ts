@@ -4,7 +4,6 @@ import PostalMime from "postal-mime";
 interface Env {
   DB: D1Database;
   API_TOKEN: string;
-  ROUTE_ADDRESS: string;
 }
 
 function json(data: unknown, status = 200): Response {
