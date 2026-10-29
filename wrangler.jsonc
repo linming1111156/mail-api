@@ -2,6 +2,13 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "mail-api",
 	"main": "src/index.ts",
+	"d1_databases": [
+	    {
+			"binding": "DB",
+			"database_name": "mail-db",
+			"database_id": "ff189cc1-2ff7-485b-879c-8ec9cf35e921"
+		}
+	],
 	"compatibility_date": "2025-10-08",
 	"upload_source_maps": true,
 	"assets": {
